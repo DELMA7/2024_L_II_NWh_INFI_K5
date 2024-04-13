@@ -1,7 +1,7 @@
 jobs:
   build-and-test:
     machine:
-      image: ubuntu-2204:2024.01.2
+    image: ubuntu-2204:2024.01.2
     steps:
       - checkout
       - run: make deps
@@ -9,6 +9,7 @@ jobs:
       - run: make test
       - run: make docker_build
       - run: make docker_push
+
 workflows:
   basic:
     jobs:
